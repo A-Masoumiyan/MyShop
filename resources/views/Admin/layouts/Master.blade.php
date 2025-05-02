@@ -20,8 +20,11 @@
     @include('Admin.layouts.Sidebar-part')
 
     <div id="content" class="main-content">
+        <div class="layout-px-spacing">
 
-        @yield("content")
+            @yield("content")
+
+        </div>
 
         @include('Admin.layouts.footer-tag')
 
