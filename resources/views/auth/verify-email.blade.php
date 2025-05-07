@@ -55,9 +55,8 @@
                                     <button type="submit" class="btn btn-danger" value="">خروج از حساب</button>
                                 </div>
                             </div>
+                        </div>
                     </form>
-
-
                 </div>
             </div>
         </div>
