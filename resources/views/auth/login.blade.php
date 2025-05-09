@@ -17,7 +17,6 @@
 </head>
 <body class="form">
 
-
 <div class="form-container outer">
     <div class="form-form">
         <div class="form-form-wrap">
@@ -40,6 +39,9 @@
                                     <circle cx="12" cy="7" r="4"></circle>
                                 </svg>
                                 <input id="identifier" name="identifier" type="text" class="form-control" placeholder="نام کاربری / ایمیل" value="{{ old('identifier') }}">
+                                @error('identifier')
+                                <span class="text-danger text-sm mt-1">این نام کاربری وجود ندارد</span>
+                                @enderror
                             </div>
 
                             <div id="password-field" class="field-wrapper input mb-2">
@@ -53,6 +55,9 @@
                                     <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
                                 </svg>
                                 <input id="password" name="password" type="password" class="form-control" placeholder="رمزعبور">
+                                @error('password')
+                                <span class="text-danger text-sm mt-1">رمز عبور صحیح نیست</span>
+                                @enderror
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                      stroke-linejoin="round" id="toggle-password" class="feather feather-eye">
                                     <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
@@ -72,12 +77,8 @@
                                         <span class="new-control-indicator"></span><span>مرا به خاطر بسپار</span>
                                     </label>
                                 </div>
-                                @error('terms')
-                                <div class="invalid-feedback d-block mt-2">{{ $message }}</div>
-                                @enderror
                             </div>
                             <p class="signup-link mt-4">حساب ندارید؟ <a href="{{ route('register') }}"> یک حساب کاربری ایجاد کنید</a></p>
-
                         </div>
 
                     </form>

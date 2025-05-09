@@ -15,6 +15,7 @@
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM STYLES -->
     <link href="{{asset('AdminAssets/plugins/apex/apexcharts.css')}}" rel="stylesheet" type="text/css">
     <link href="{{asset('AdminAssets/assets/css/dashboard/dash_1.css')}}" rel="stylesheet" type="text/css"/>
+    <link href="{{asset('AdminAssets/assets/css/users/user-profile.css')}}" rel="stylesheet" type="text/css" />
     <!-- END PAGE LEVEL PLUGINS/CUSTOM STYLES -->
 
 </head>

@@ -2,16 +2,9 @@
 <html lang="en">
 @include('Admin.layouts.head-tag')
 <body>
-<div id="load_screen">
-    <div class="loader">
-        <div class="loader-content">
-            <div class="spinner-grow align-self-center"></div>
-        </div>
-    </div>
-</div>
 @include('Admin.layouts.Navbar-part')
 @include('Admin.layouts.Navbar-part-tow')
-
+@include('Admin.layouts.Toastify')
 
 <div class="main-container" id="container">
     <div class="overlay"></div>

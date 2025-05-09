@@ -15,4 +15,6 @@
 <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
 <script src="{{asset('AdminAssets/plugins/apex/apexcharts.min.js')}}"></script>
 <script src="{{asset('AdminAssets/assets/js/dashboard/dash_1.js')}}"></script>
+<script src="{{asset('AdminAssets/assets/js/bootstrap.bundle.min.js')}}"></script>
+
 <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->

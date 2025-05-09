@@ -16,7 +16,8 @@ class ProfileController extends Controller
      */
     public function edit(Request $request): View
     {
-        return view('profile.edit', [
+//        profile.edit
+        return view('Admin.index', [
             'user' => $request->user(),
         ]);
     }
@@ -30,6 +31,7 @@ class ProfileController extends Controller
 
         if ($request->user()->isDirty('email')) {
             $request->user()->email_verified_at = null;
+            $request->user()->sendEmailVerificationNotification();
         }
 
         $request->user()->save();
