@@ -10,11 +10,21 @@
     });
 </script>
 <script src="{{asset('AdminAssets/assets/js/custom.js')}}"></script>
+<script src="{{asset('AdminAssets/plugins/highlight/highlight.pack.js')}}"></script>
+<script src="{{asset('AdminAssets/assets/js/custom.js')}}"></script>
 <!-- END GLOBAL MANDATORY SCRIPTS -->
 
 <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
 <script src="{{asset('AdminAssets/plugins/apex/apexcharts.min.js')}}"></script>
 <script src="{{asset('AdminAssets/assets/js/dashboard/dash_1.js')}}"></script>
 <script src="{{asset('AdminAssets/assets/js/bootstrap.bundle.min.js')}}"></script>
+<script src="{{asset('AdminAssets/plugins/drag-and-drop/dragula/dragula.min.js')}}"></script>
+<script src="{{asset('AdminAssets/plugins/drag-and-drop/dragula/custom-dragula.js')}}"></script>
+<script src="{{asset('AdminAssets/assets/js/scrollspyNav.js')}}"></script>
+<script>
+    $(".tagging").select2({
+        tags: true
+    });
+</script>
 
 <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->

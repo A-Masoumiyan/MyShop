@@ -1,14 +1,15 @@
+<!--suppress ALL -->
 <div class="header-container fixed-top">
     <header class="header navbar navbar-expand-sm">
 
         <ul class="navbar-item theme-brand flex-row  text-center">
             <li class="nav-item theme-logo">
-                <a href="index.html">
+                <a href="#">
                     <img src="{{asset('AdminAssets/assets/img/90x90.jpg')}}" class="navbar-logo" alt="logo">
                 </a>
             </li>
             <li class="nav-item theme-text">
-                <a href="index.html" class="nav-link"> کورک </a>
+                <a href="#" class="nav-link"> فروشگاه من </a>
             </li>
         </ul>
 
@@ -21,7 +22,7 @@
                 </svg>
                 <form class="form-inline search-full form-inline search" role="search">
                     <div class="search-bar">
-                        <input type="text" class="form-control search-form-control  ml-lg-auto" placeholder="جستجو کنید...">
+                        <input type="text" class="form-control search-form-control  ml-lg-auto" placeholder="جستجو کنید...  (غیر فعال)">
                     </div>
                 </form>
             </li>
@@ -29,20 +30,8 @@
 
         <ul class="navbar-item flex-row ml-md-auto">
 
-            <li class="nav-item dropdown language-dropdown">
-                <a href="javascript:void(0);" class="nav-link dropdown-toggle" id="language-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img src="{{asset('AdminAssets/assets/img/ca.png')}}" class="flag-width" alt="flag">
-                </a>
-                <div class="dropdown-menu position-absolute" aria-labelledby="language-dropdown">
-                    <a class="dropdown-item d-flex" href="javascript:void(0);"><img src="{{asset('AdminAssets/assets/img/de.png')}}" class="flag-width" alt="flag"> <span class="align-self-center">&nbsp;آلمانی</span></a>
-                    <a class="dropdown-item d-flex" href="javascript:void(0);"><img src="{{asset('AdminAssets/assets/img/jp.png')}}" class="flag-width" alt="flag"> <span class="align-self-center">&nbsp;ژاپنی</span></a>
-                    <a class="dropdown-item d-flex" href="javascript:void(0);"><img src="{{asset('AdminAssets/assets/img/fr.png')}}" class="flag-width" alt="flag"> <span class="align-self-center">&nbsp;فرانسوی</span></a>
-                    <a class="dropdown-item d-flex" href="javascript:void(0);"><img src="{{asset('AdminAssets/assets/img/ca.png')}}" class="flag-width" alt="flag"> <span class="align-self-center">&nbsp;انگلیسی</span></a>
-                </div>
-            </li>
-
             <li class="nav-item dropdown message-dropdown">
-                <a href="javascript:void(0);" class="nav-link dropdown-toggle" id="messageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a href="#" class="nav-link dropdown-toggle" id="messageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                          class="feather feather-mail">
                         <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
@@ -53,7 +42,6 @@
                     <div class="">
                         <a class="dropdown-item">
                             <div class="">
-
                                 <div class="media">
                                     <div class="user-img">
                                         <img class="usr-img rounded-circle" src="{{asset('AdminAssets/assets/img/90x90.jpg')}}" alt="profile">
@@ -65,41 +53,6 @@
                                         </div>
                                     </div>
                                 </div>
-
-                            </div>
-                        </a>
-                        <a class="dropdown-item">
-                            <div class="">
-
-                                <div class="media">
-                                    <div class="user-img">
-                                        <img class="usr-img rounded-circle" src="{{asset('AdminAssets/assets/img/90x90.jpg')}}" alt="profile">
-                                    </div>
-                                    <div class="media-body">
-                                        <div class="">
-                                            <h5 class="usr-name">هومن شکیبا</h5>
-                                            <p class="msg-title">پیام شما</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </a>
-                        <a class="dropdown-item">
-                            <div class="">
-
-                                <div class="media">
-                                    <div class="user-img">
-                                        <img class="usr-img rounded-circle" src="{{asset('AdminAssets/assets/img/90x90.jpg')}}" alt="profile">
-                                    </div>
-                                    <div class="media-body">
-                                        <div class="">
-                                            <h5 class="usr-name">زهرا جوان</h5>
-                                            <p class="msg-title">اکانت شما بروز شد</p>
-                                        </div>
-                                    </div>
-                                </div>
-
                             </div>
                         </a>
                     </div>
@@ -130,34 +83,6 @@
                             </div>
                         </div>
 
-                        <div class="dropdown-item">
-                            <div class="media">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                     stroke-linejoin="round" class="feather feather-share-2">
-                                    <circle cx="18" cy="5" r="3"></circle>
-                                    <circle cx="6" cy="12" r="3"></circle>
-                                    <circle cx="18" cy="19" r="3"></circle>
-                                    <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
-                                    <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
-                                </svg>
-                                <div class="media-body">
-                                    <div class="notification-para"><span class="user-name">رضا جوان </span> پست شما را به اشتراک گذاشت</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="dropdown-item">
-                            <div class="media">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                     stroke-linejoin="round" class="feather feather-tag">
-                                    <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
-                                    <line x1="7" y1="7" x2="7" y2="7"></line>
-                                </svg>
-                                <div class="media-body">
-                                    <div class="notification-para"><span class="user-name">محمدرضا پر </span> از شما در اظهار نظر نام برد.</div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </li>
@@ -185,10 +110,6 @@
                                     <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
                                 </svg>
                                 حریم خصوصی</a>
-                        </div>
-                        <div class="dropdown-item">
-                            <a href="#">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-briefcase"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>                                 مدیریت</a>
                         </div>
                         <div class="dropdown-item">
                             <a href="#">
