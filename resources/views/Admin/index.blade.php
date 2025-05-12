@@ -221,7 +221,7 @@
                         </div>
 
                         <div class="d-flex justify-content-end">
-                            <button type="button" class="btn btn-secondary me-2" data-bs-dismiss="modal">لغو</button>
+                            <button type="button" class="btn btn-success me-2" data-bs-dismiss="modal">لغو</button>
                             <button type="submit" class="btn btn-danger">حذف حساب</button>
                         </div>
                     </form>
