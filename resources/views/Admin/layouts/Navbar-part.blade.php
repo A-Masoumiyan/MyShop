@@ -5,7 +5,7 @@
         <ul class="navbar-item theme-brand flex-row  text-center">
             <li class="nav-item theme-logo">
                 <a href="#">
-                    <img src="{{asset('AdminAssets/assets/img/90x90.jpg')}}" class="navbar-logo" alt="logo">
+                    <img src="{{asset('AdminAssets/assets/img/ali-shop.png')}}" class="navbar-logo" alt="logo">
                 </a>
             </li>
             <li class="nav-item theme-text">
@@ -44,7 +44,7 @@
                             <div class="">
                                 <div class="media">
                                     <div class="user-img">
-                                        <img class="usr-img rounded-circle" src="{{asset('AdminAssets/assets/img/90x90.jpg')}}" alt="profile">
+                                        <img class="usr-img rounded-circle" src="{{asset('AdminAssets/assets/img/user-default.png')}}" alt="profile">
                                     </div>
                                     <div class="media-body">
                                         <div class="">
@@ -89,7 +89,7 @@
 
             <li class="nav-item dropdown user-profile-dropdown">
                 <a href="javascript:void(0);" class="nav-link dropdown-toggle user" id="userProfileDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                    <img src="{{asset('AdminAssets/assets/img/90x90.jpg')}}" alt="avatar">
+                    <img src="{{ auth()->user()->profile_image ? asset('storage/' . auth()->user()->profile_image) : asset('AdminAssets/assets/img/user-default.png') }}" alt="avatar">
                 </a>
                 <div class="dropdown-menu position-absolute" aria-labelledby="userProfileDropdown">
                     <div class="">

@@ -30,7 +30,7 @@
                                     <div class="col-sm-6">
                                         <div id="{{ $loop->odd ? 'right-defaults' : 'left-defaults' }}" class="dragula">
                                                 <div class="media  d-md-flex d-block text-sm-left text-center">
-                                                    <img alt="avatar" src="{{asset('AdminAssets/assets/img/90x90.jpg')}}" class="img-fluid ">
+                                                    <img alt="avatar" src="{{ $role_user->profile_image ? asset('storage/' . $role_user->profile_image) : asset('AdminAssets/assets/img/user-default.png') }}" class="img-fluid ">
                                                     <div class="media-body">
                                                         <div class="d-xl-flex d-block justify-content-between">
                                                             <div class="">
