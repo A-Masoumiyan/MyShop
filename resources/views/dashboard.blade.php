@@ -18,7 +18,7 @@
                         </a>
                     </div>
                     <div class="text-center user-info">
-                        <img src="{{asset('AdminAssets/assets/img/90x90.jpg')}}" alt="avatar">
+                        <img style="width: 180px; height: 130px" src="{{ auth()->user()->profile_image ? asset('storage/' . auth()->user()->profile_image) : asset('AdminAssets/assets/img/user-default.png') }}" alt="avatar">
                         <p>{{ auth()->user()->firstname }} {{ auth()->user()->lastname }}</p>
                     </div>
                     <div class="user-info-list">
