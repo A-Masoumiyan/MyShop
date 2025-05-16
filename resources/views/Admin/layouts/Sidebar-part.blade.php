@@ -30,7 +30,7 @@
                     </li>
                 </ul>
             </li>
-            @role('admin')
+            @can('create-super-user')
             <li class="menu">
                 <a href="#submenu" data-active="{{ request()->is('admin/roles*') ? 'true' : 'false' }}" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                     <div class="">
@@ -62,7 +62,7 @@
 
                 </ul>
             </li>
-            @endrole
+            @endcan
         </ul>
 
     </nav>
