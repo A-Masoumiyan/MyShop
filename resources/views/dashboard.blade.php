@@ -8,7 +8,7 @@
             <div class="user-profile layout-spacing">
                 <div class="widget-content widget-content-area">
                     <div class="d-flex justify-content-between">
-                        <h3 class="">پروفایل</h3>
+                        <h3 class="pb-3">پروفایل</h3>
                         <a href="{{route('profile.edit')}}" class="mt-2 edit-profile">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                  stroke-linejoin="round" class="feather feather-edit-3">
@@ -24,7 +24,7 @@
                     <div class="user-info-list">
                         <div>
                             <ul class="contacts-block list-unstyled">
-                                <li class="contacts-block__item">
+                                <li class="contacts-block__item" >
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                          stroke-linejoin="round" class="feather feather-coffee">
                                         <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
@@ -63,7 +63,7 @@
                                     {{Jdatename(auth()->user()->created_at).'  '}}
                                 </li>
                                 <li class="contacts-block__item">
-                                    <a href="mailto:example@mail.com">
+                                    <a href="{{ auth()->user()->email}}" style="display: inline-flex;">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                              stroke-linejoin="round" class="feather feather-mail">
                                             <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
@@ -79,7 +79,7 @@
 
             <div class="education layout-spacing ">
                 <div class="widget-content widget-content-area">
-                    <h3 class="">دسترسی ها</h3>
+                    <h3 class="pb-2">دسترسی ها</h3>
                     <div class="timeline-alter">
                         @forelse(auth()->user()->getAllPermissions()->pluck('name') as $permission)
                             @switch($permission)
@@ -95,7 +95,17 @@
                                         </div>
                                     </div>
                                     @break
-
+                                @default
+                                    <div class="item-timeline">
+                                        <div class="t-meta-date">
+                                            <p class="">{{$permission}}</p>
+                                        </div>
+                                        <div class="t-dot">
+                                        </div>
+                                        <div class="t-text">
+                                            <p>{{$permission}}</p>
+                                        </div>
+                                    </div>
                             @endswitch
                         @empty
                             فاغد دسترسی
