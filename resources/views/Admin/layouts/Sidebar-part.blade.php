@@ -31,37 +31,72 @@
                 </ul>
             </li>
             @can('create-super-user')
-            <li class="menu">
-                <a href="#submenu" data-active="{{ request()->is('admin/roles*') ? 'true' : 'false' }}" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                    <div class="">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                             stroke-linejoin="round" class="feather feather-terminal">
-                            <polyline points="4 17 10 11 4 5"></polyline>
-                            <line x1="12" y1="19" x2="20" y2="19"></line>
-                        </svg>
-                        <span>مدیریت نقش ها</span>
-                    </div>
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                             stroke-linejoin="round" class="feather feather-chevron-right">
-                            <polyline points="9 18 15 12 9 6"></polyline>
-                        </svg>
-                    </div>
-                </a>
-                <ul class="collapse submenu list-unstyled {{ request()->is('admin/roles*') ? 'show' : '' }}" id="submenu" data-parent="#accordionExample">
-                    <li class="{{ request()->is('admin/roles') ? 'active' : '' }}">
-                        <a href="{{route('admin.roles.index')}}">گروه کاربران </a>
-                    </li>
-                    <li class="{{ request()->is('admin/roles/users') ? 'active' : '' }}">
-                        <a href="{{ route('admin.users.list') }}"> افزودن نقش به کاربران </a>
+                <li class="menu">
+                    <a href="#submenu" data-active="{{ request()->is('admin/roles*') ? 'true' : 'false' }}" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <div class="">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round" class="feather feather-terminal">
+                                <polyline points="4 17 10 11 4 5"></polyline>
+                                <line x1="12" y1="19" x2="20" y2="19"></line>
+                            </svg>
+                            <span> نقش ها</span>
+                        </div>
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round" class="feather feather-chevron-right">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </div>
+                    </a>
+                    <ul class="collapse submenu list-unstyled {{ request()->is('admin/roles*') ? 'show' : '' }}" id="submenu" data-parent="#accordionExample">
+                        <li class="{{ request()->is('admin/roles') ? 'active' : '' }}">
+                            <a href="{{route('admin.roles.index')}}">گروه کاربران </a>
+                        </li>
+                        <li class="{{ request()->is('admin/roles/users') ? 'active' : '' }}">
+                            <a href="{{ route('admin.users.list') }}"> افزودن نقش به کاربران </a>
 
-                    </li>
-                    <li class="{{ request()->is('admin/roles/manage') ? 'active' : '' }}">
-                        <a href="{{ route('admin.roles.manage') }}"> مدیریت نقش ها </a>
-                    </li>
+                        </li>
+                        <li class="{{ request()->is('admin/roles/manage') ? 'active' : '' }}">
+                            <a href="{{ route('admin.roles.manage') }}"> مدیریت نقش ها </a>
+                        </li>
 
-                </ul>
-            </li>
+                    </ul>
+                </li>
+            @endcan
+
+
+            @can('create-category')
+                <li class="menu">
+                    <a href="#submenu" data-active="{{ request()->is('admin/category*') ? 'true' : 'false' }}" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <div class="">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round" class="feather feather-grid">
+                                <rect x="3" y="3" width="7" height="7"></rect>
+                                <rect x="14" y="3" width="7" height="7"></rect>
+                                <rect x="14" y="14" width="7" height="7"></rect>
+                                <rect x="3" y="14" width="7" height="7"></rect>
+                            </svg>
+                            <span>دسته بندی</span>
+                        </div>
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round" class="feather feather-chevron-right">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </div>
+                    </a>
+                    <ul class="collapse submenu list-unstyled {{ request()->is('admin/category*') ? 'show' : '' }}" id="submenu" data-parent="#accordionExample">
+
+                        <li class="{{ request()->is('admin/category') ? 'active' : '' }}">
+                            <a href="{{route('category.index')}}"> دسته بندی ها</a>
+                        </li>
+                        <li class="{{ request()->is('admin/category/create') ? 'active' : '' }}">
+                            <a href="{{route('category.create')}}">ایجاد دسته بندی</a>
+                        </li>
+
+
+                    </ul>
+                </li>
             @endcan
         </ul>
 

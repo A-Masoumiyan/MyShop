@@ -8,7 +8,7 @@
             <div class="user-profile layout-spacing">
                 <div class="widget-content widget-content-area">
                     <div class="d-flex justify-content-between">
-                        <h3 class="">پروفایل</h3>
+                        <h3 class="pb-3">پروفایل</h3>
                         <a href="{{route('profile.edit')}}" class="mt-2 edit-profile">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                  stroke-linejoin="round" class="feather feather-edit-3">
@@ -79,7 +79,7 @@
 
             <div class="education layout-spacing ">
                 <div class="widget-content widget-content-area">
-                    <h3 class="">دسترسی ها</h3>
+                    <h3 class="pb-2">دسترسی ها</h3>
                     <div class="timeline-alter">
                         @forelse(auth()->user()->getAllPermissions()->pluck('name') as $permission)
                             @switch($permission)
