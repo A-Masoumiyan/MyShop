@@ -50,8 +50,8 @@
                                                                     <div class="col pl-0">
                                                                         <label for="status" class="form-label">وضعیت دسته بندی</label>
                                                                         <select name="is_active" class="form-control" id="wes-from1">
-                                                                            <option {{$category->is_active == '1' ? 'selected=""' : '' }} value="1">فعال</option>
-                                                                            <option {{$category->is_active == '0' ? 'selected=""' : '' }}value="0">غیر فعال</option>
+                                                                            <option {{$category->is_active == '1' ? 'selected=""' : '' }} value=1>فعال</option>
+                                                                            <option {{$category->is_active == '0' ? 'selected=""' : '' }} value=0>غیر فعال</option>
 
                                                                         </select>
 
@@ -68,41 +68,15 @@
                                         <div class="flex items-center gap-4">
                                             <button type="submit" class="btn btn-primary">ویرایش</button>
 
-                                            <button type="button" class="btn btn-warning ml-1">
-                                            <a href="{{ url()->previous() }}" >بازگشت</a>
-                                            </button>
-
-                                            <button type="button" class="btn btn-danger float-right" data-bs-toggle="modal" data-bs-target="#confirmUserDeletion">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trash-2"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
-                                            </button>
+                                            <a href="{{ route('category.index')}}" >
+                                            <button type="button" class="btn btn-warning ml-2 ">
+                                            بازگشت
+                                            </button></a>
 
                                         </div>
                                     </div>
 
                                 </form>
-                                <div class="modal fade" id="confirmUserDeletion" tabindex="-1" aria-labelledby="confirmUserDeletionLabel" aria-hidden="true">
-                                    <div class="modal-dialog modal-dialog-centered">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="confirmUserDeletionLabel"> تأیید حذف دسته بندی: {{$category->name}}</h5>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <form method="post" action="{{ route('category.destroy', $category->id) }}">
-                                                    @csrf
-                                                    @method('delete')
-
-                                                    <p>آیا مطمئن هستید که می‌خواهید این دسته بندی را حذف کنید؟ این اقدام غیرقابل بازگشت است .</p>
-
-                                                    <div class="pt-3">
-                                                        <button type="button" class="btn btn-primary me-2 " data-bs-dismiss="modal">لغو</button>
-                                                        <button type="submit" class="btn btn-danger float-right">حذف دسته بندی</button>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
 
                             </div>
                         </div>
