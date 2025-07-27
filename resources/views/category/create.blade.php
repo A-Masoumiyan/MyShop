@@ -14,8 +14,7 @@
                                     @csrf
 
                                     <div class="info">
-                                        <h5>ویرایش اطلاعات</h5>
-                                        <p style="color: #009688 " class="mb-3">برای ویرایش محتوای هر یک از فیلدهای زیر را تغییر دهید.</p>
+                                        <h5 style="color: #009688" class="mb-5">ایجاد دسته بندی</h5>
                                         <div class="row">
                                             <div class="col-lg-11 mx-auto">
                                                 <div class="row mb-4">
@@ -25,7 +24,7 @@
                                                             <input type="file" name="category_image" id="input-file-max-fs" class="dropify"
                                                                    data-default-file="{{asset('AdminAssets/assets/img/user-default.png')}}"
                                                                    data-max-file-size="4M"/>
-                                                            <p class="mt-2"><i class="flaticon-cloud-upload mr-1"></i> آپلود عکس</p>
+                                                            <p class="mt-2"><i class="flaticon-cloud-upload mr-1 ml-4"></i> آپلود عکس</p>
                                                         </div>
                                                     </div>
                                                     <div class="col-xl-10 col-lg-12 col-md-8 mt-md-0 mt-4">

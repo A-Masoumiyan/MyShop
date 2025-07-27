@@ -38,11 +38,11 @@ class CategoryController extends Controller
         ]);
 
         if ($request->hasFile('category_image')) {
-            $path = $request->file('category_image')->store('category_image', 'public');
+            $path = $request->file('category_image')->store('category_images', 'public');
             $validated['category_image'] = $path;
         }
         Category::create($validated);
-        return redirect()->route('category.index')->with('success', 'دسته بندی :  '.$validated['name'] .'  با موفقیت ایجاد شد');
+        return redirect()->route('category.index')->with('success', 'دسته بندی :  ' . $validated['name'] . '  با موفقیت ایجاد شد');
     }
 
     /**
@@ -80,7 +80,7 @@ class CategoryController extends Controller
 
         $category->fill($data);
         $category->save();
-        return redirect()->route('category.index')->with('success', 'دسته بندی :  '.$data['name'] .'  با موفقیت بروزرسانی شد');
+        return redirect()->route('category.index')->with('success', 'دسته بندی :  ' . $data['name'] . '  با موفقیت بروزرسانی شد');
     }
 
     /**
@@ -93,6 +93,6 @@ class CategoryController extends Controller
             Storage::disk('public')->delete($category->category_image);
         }
         $category->delete();
-        return redirect()->route('category.index')->with('success', 'دسته بندی :  '.$category['name'] .'  با موفقیت حذف شد');
+        return redirect()->route('category.index')->with('success', 'دسته بندی :  ' . $category['name'] . '  با موفقیت حذف شد');
     }
 }

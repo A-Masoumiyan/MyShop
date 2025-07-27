@@ -26,4 +26,5 @@
 <script src="{{asset('AdminAssets/plugins/drag-and-drop/dragula/custom-dragula.js')}}"></script>
 <script src="{{asset('AdminAssets/assets/js/scrollspyNav.js')}}"></script>
 
+
 <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->

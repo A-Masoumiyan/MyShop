@@ -13,9 +13,17 @@
   position: relative;
   display: block; }
   .custom-file-container label {
-    color: #009688; }
+    color: #009688;
+    font-size: larger;
+  }
     .custom-file-container label .custom-file-container__image-clear {
-      color: #e0e6ed; }
+      color: black;
+        background-color: #df471e;
+        font-size: 16px;
+        border-radius:36%;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 
 .custom-file-container__custom-file {
   box-sizing: border-box;
@@ -77,8 +85,9 @@
 .custom-file-container__image-preview {
   box-sizing: border-box;
   transition: all 0.2s ease;
-  margin-top: 54px;
-  margin-bottom: 40px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+    margin-right: 1%;
   height: 250px;
   width: 100%;
   border-radius: 4px;
@@ -86,7 +95,7 @@
   background-position: center center;
   background-repeat: no-repeat;
   background-color: transparent;
-  overflow: auto;
+  overflow: unset;
   padding: 15px; }
 
 .custom-file-container__image-multi-preview {
@@ -98,24 +107,31 @@
   background-position: center center;
   background-repeat: no-repeat;
   float: right;
-  margin: 1.858736%;
-  width: 29.615861214%;
-  height: 90px;
+  margin: 1.4%;
+  width: 9.615861214%;
+  height: 80%;
   box-shadow: 0 4px 10px 0 rgba(51, 51, 51, 0.25); }
 
 .custom-file-container__image-multi-preview__single-image-clear {
   right: -6px;
-  background: #ffffff;
+  background: #df471e;
   position: absolute;
   width: 20px;
   height: 20px;
   border-radius: 50%;
   text-align: center;
+    font-size: larger;
   margin-top: -6px;
   box-shadow: 0 4px 10px 0 rgba(51, 51, 51, 0.25); }
   .custom-file-container__image-multi-preview__single-image-clear:hover {
-    background: #cbcbbd;
-    cursor: pointer; }
+    background: orangered;
+    cursor: pointer;
+      width: 30px;
+      height: 30px;
+      font-size: x-large;
+      box-shadow: 0 4px 10px 4px #df471e;
+
+  }
 
 .custom-file-container__image-multi-preview__single-image-clear__icon {
   color: #1b55e2;
